@@ -1,4 +1,4 @@
-public class SubArrayWithGivenSum {
+public class A_SubArrayWithGivenSum {
     public static int[] findSubarrayWithSum(int[] nums, int target) {
         int start = 0;
         int currentSum = 0;

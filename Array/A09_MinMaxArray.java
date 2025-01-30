@@ -9,17 +9,16 @@ public class A09_MinMaxArray {
     public static int[] MinMaxArray(int[] arr){
         int[] ans = new int[2];
 
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        ans[0] = Integer.MAX_VALUE;
+        ans[1] = Integer.MIN_VALUE;
 
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] > max) max = arr[i];
-            if (arr[i] < min) min = arr[i];
+        for (int ele : arr) {
+            if(ele > ans[1]) ans[1] = ele;
+            if (ele < ans[0]) ans[0] = ele;
         }
-        ans[0] = max;
-        ans[1] = min;
-        System.out.println("Maximum : "+max);
-        System.out.println("Minimum : "+min);
+
+        System.out.println("Maximum : "+ans[1]);
+        System.out.println("Minimum : "+ans[0]);
 
         return ans;
     }
